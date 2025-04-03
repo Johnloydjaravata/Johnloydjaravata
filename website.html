@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Coffee Shop - Welcome!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .hero {
+            background-color: #b5838d;
+            color: white;
+            padding: 50px;
+            text-align: center;
+            background-image: url('file:///C:/Users/USER/Downloads/brown-roasted-coffee-beans-closeup-600nw-1925210999.webp'); /* Updated path */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        .menu {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .menu h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #b5838d;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            display: inline-block;
+            text-align: left;
+            padding: 0;
+        }
+
+        .menu ul li {
+            font-size: 1.5em;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu ul li img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 50%;
+            cursor: pointer; /* Make images look clickable */
+            transition: transform 0.3s ease; /* Smooth zoom effect */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+
+        /* For Enlarging on Click */
+        .zoomed-in {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .zoomed-in img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        /* Order Section */
+        .order-process {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .order-process h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #b5838d;
+        }
+
+        .order-process form {
+            margin: 0 auto;
+            text-align: left;
+            width: 80%;
+        }
+
+        .order-process .order-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .order-process .order-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        .order-process .total {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to John's Coffee Shop</h1>
+            <p>Your neighborhood coffee shop serving fresh and delicious brews.</p>
+        </section>
+
+        <section id="menu" class="menu">
+            <h1>Our Menu</h1>
+
+            <h2>Coffee</h2>
+            <ul>
+                <li>
+                    <img src="C:\Users\USER\Downloads\Hot_Espresso_Coffee_in_a_transparent_glass_cup.jpg" alt="Espresso">
+                    Espresso - ₱150
+                </li>
+                <li>
+                    <img src="C:\Users\USER\Downloads\download (4).jpg" alt="Americano">
+                    Americano - ₱200
+                </li>
+                <li>
+                    <img src="file:///C:/Users/USER/Downloads/Cappuccino-exc.webp" alt="Cappuccino">
+                    Cappuccino - ₱225
+                </li>
+                <li>
+                    <img src="C:\Users\USER\Downloads\Caffe_Latte_at_Pulse_Cafe.jpg" alt="Latte">
+                    Latte - ₱225
+                </li>
+            </ul>
+
+            <h2>Snacks</h2>
+            <ul>
+                <li>
+                    <img src="C:\Users\USER\Downloads\Mediterranean-Pastry-Pinwheels_EXPS_THCA17_157597_C11_01_4b.jpg" alt="Pastry">
+                    Pastry - ₱125
+                </li>
+                <li>
+                    <img src="C:\Users\USER\Downloads\Mini-Chocolate-Chip-Muffins-9.jpg" alt="Muffin">
+                    Muffin - ₱150
+                </li>
+                <li>
+                    <img src="C:\Users\USER\Downloads\IMG-8129-1-scaled.jpg" alt="Cookie">
+                    Cookie - ₱100
+                </li>
+            </ul>
+        </section>
+
+        <section id="order" class="order-process">
+            <h2>Place Your Order</h2>
+            <form action="#" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <div class="order-item">
+                    <img src="espresso.jpg" alt="Espresso">
+                    <select id="coffee" name="coffee" required onchange="updateTotal()">
+                        <option value="Espresso" data-price="150">Espresso - ₱150</option>
+                        <option value="Americano" data-price="200">Americano - ₱200</option>
+                        <option value="Cappuccino" data-price="225">Cappuccino - ₱225</option>
+                        <option value="Latte" data-price="225">Latte - ₱225</option>
+                    </select>
+                </div>
+
+                <div class="order-item">
+                    <img src="pastry.jpg" alt="Pastry">
+                    <select id="snack" name="snack" required onchange="updateTotal()">
+                        <option value="Pastry" data-price="125">Pastry - ₱125</option>
+                        <option value="Muffin" data-price="150">Muffin - ₱150</option>
+                        <option value="Cookie" data-price="100">Cookie - ₱100</option>
+                    </select>
+                </div>
+
+                <label for="message">Special Instructions (Optional):</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Submit Order</button>
+            </form>
+
+            <!-- Total Price Display -->
+            <div class="total">
+                Total: ₱<span id="total-price">0</span>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 John's Coffee Shop</p>
+        </footer>
+    </main>
+
+    <script>
+        function updateTotal() {
+            // Get the selected items
+            const coffeeSelect = document.getElementById("coffee");
+            const snackSelect = document.getElementById("snack");
+
+            // Get the price values from the selected options
+            const coffeePrice = parseInt(coffeeSelect.selectedOptions[0].getAttribute("data-price"));
+            const snackPrice = parseInt(snackSelect.selectedOptions[0].getAttribute("data-price"));
+
+            // Calculate the total price
+            const totalPrice = coffeePrice + snackPrice;
+
+            // Display the total price
+            document.getElementById("total-price").innerText = totalPrice;
+        }
+
+        // Initial total calculation on page load
+        window.onload = updateTotal;
+    </script>
+</body>
+</html>
